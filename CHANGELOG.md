@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+1.2.2 - 2025-10-12
+------------------
+
+Generate URLs via `ARTICLE_URL` and `PAGE_URL` settings
+
 1.2.1 - 2025-06-12
 ------------------
 
