@@ -40,8 +40,7 @@ def format_date(date_time):
     """Format the datetime in the expected format."""
     if date_time.tzinfo is None:
         date_time = date_time.replace(tzinfo=timezone.utc)
-    date_time_string = date_time.isoformat(timespec="seconds")
-    return date_time_string
+    return date_time.isoformat(timespec="seconds")
 
 
 CHANGEFREQ_DEFAULTS = {

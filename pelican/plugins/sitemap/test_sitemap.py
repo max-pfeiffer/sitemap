@@ -1,9 +1,9 @@
 import importlib.resources
-import unittest
 from pathlib import Path
 from shutil import rmtree
 from tempfile import mkdtemp
-from xml.etree import ElementTree
+import unittest
+from xml.etree import ElementTree as ET
 
 from pelican import Pelican
 from pelican.settings import read_settings
@@ -66,7 +66,7 @@ http://localhost/translated-post.html
         with open(Path(self.output_path) / "sitemap.xml") as fd:
             contents = fd.read()
 
-        xml_root = ElementTree.fromstring(contents)
+        xml_root = ET.fromstring(contents)
         localhost_element = xml_root[0]
         lastmod = localhost_element[1].text
         assert lastmod.endswith("+00:00")
